@@ -1,0 +1,142 @@
+/*image slider*/
+section.sec1{
+    width:100%;
+    height:500px;
+    /*height:100vh;
+    background:url("src/assets/Images/thumb-1920-645963.jpg");
+    background-size: cover;*/
+}
+
+.container-slider{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height:500px;
+}
+
+.container-slider .slider{
+    position: absolute;
+    top:0;
+    left:0;
+    width:500%;
+    height:100%;
+    animation: moveslider 100s linear infinite;
+}
+
+.container-slider .slider .slide{
+    position: relative;
+    width: 20%;
+    height:100%;
+    float: left;
+}
+
+.container-slider .slider .slide .caption{
+    position: absolute;
+    bottom:60px;
+    left:60px;
+    right:60px;
+    padding:30px;
+    background:rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.container-slider .slider .slide .caption .topic{
+    margin:0 0 20px;
+    padding:0;
+    color: #fff;
+    font-size:48px;
+    transition: 0.5s;
+}
+
+.container-slider .slider .slide .caption p{
+    margin:0;
+    padding:0;
+    color: #fff;
+    font-size:18px;
+    transition: 0.5s;
+}
+
+
+.container-slider .slider .slide.slide1{
+    background:url("/assets/Images/thumb-1920-645963.jpg");
+    background-size: cover;
+    
+}
+.container-slider .slider .slide.slide2{
+    background:url("/assets/Images/KungFuPanda3.png");
+    background-size: cover;
+    
+}
+.container-slider .slider .slide.slide3{
+    background:url("/assets/Images/Avengers-Age-of-Ultron-2015-Movie-Poster.jpg");
+    background-size: cover;
+    
+}
+.container-slider .slider .slide.slide4{
+    background:url("/assets/Images/BAAHUBALI-Socialpost.jpg");
+    background-size: cover;
+    
+}
+
+@keyframes moveslider{
+    0%
+    {
+        left: 0;
+    }
+    
+    100%{
+        left: -400%;
+    }
+}
+/*image slider end*/
+
+
+section.content{
+    padding: 100px;
+}
+
+
+
+
+/*making slider responsive*/
+@media(max-width:768px){
+
+    /*image slider responsive*/
+    .container-slider .slider .slide .caption{
+        bottom:20px;
+        left:20px;
+        right:20px;
+        padding:20px;
+    }
+    
+    .container-slider .slider .slide .caption .topic{
+        margin:0 0 10px;
+        font-size:30px;
+    }
+    
+    .container-slider .slider .slide .caption p{
+        font-size:16px;
+    }
+
+    .sec1{
+        margin-top:60px;
+    }
+
+}
+
+@media(max-width:425px){
+
+    section.sec1{
+        height: 260px;
+    }
+    .container-slider{
+        height: 260px;
+    }
+    .container-slider .slider .slide .caption .topic{
+        font-size:23px;
+    }
+    .container-slider .slider .slide .caption p{
+        font-size: 13px;
+    }
+}

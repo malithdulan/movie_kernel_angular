@@ -1,0 +1,54 @@
+
+
+<app-second-nav></app-second-nav>
+
+
+<div class="container-fluid load-cont" *ngIf="anim">
+    <div class="row">
+      <div style="margin-left:auto;margin-right:auto;display:flex;justify-content:center;align-items:center;height:300px;" class="col-md-8">
+        <div class="loader"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+<section class="section-container" *ngIf="loading_over">
+<div class="container-fluid">
+  
+    <div class="row row-align">
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2" id="movie-card" *ngFor="let movie of movies | orderBy: order : true | paginate: { itemsPerPage:6, currentPage: p }">
+        <div class="box">
+          <div class="imgBox">
+            <img  src="{{movie.mainimgurl}}" alt="image" class="img-responsive">
+            <img *ngIf="movie.b720p || movie.mb720p" src="assets/Images/720p.png" alt="image" class="img-shape">
+            <img *ngIf="movie.b1080p || movie.mb1080p" src="assets/Images/1080p.png" alt="image" class="img-shape">
+          </div>
+          <div class="content">
+            <h3><a href="{{movie.cam}}">
+              <img  src="https://yts.am/assets/images/website/logo-imdb.svg" alt="Imdb Site" /></a> {{movie.imdb}}</h3>
+            <h3>{{movie.maincategory}}</h3>
+            <a target="_blank" [routerLink]="['/movie-details',movie.$key]" class="btn btn-default btnD shadow-none">View Details</a>
+          </div>
+        </div>
+        <h5>{{movie.filmname}}</h5>
+      </div>
+
+      
+      
+      
+    </div>
+</div>
+<div class="pagination-container">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</section>

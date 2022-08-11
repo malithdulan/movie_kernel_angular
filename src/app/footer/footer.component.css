@@ -1,0 +1,82 @@
+
+.footer-main{
+    background: #fff;
+}
+
+.footer-social{
+    height:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social ul{
+    position:absolute;
+    margin:0;
+    padding:0;
+    display: flex;
+}
+
+.footer-social ul li{
+    list-style: none;
+}
+
+.footer-social ul li a{
+    position: relative;
+    width:60px;
+    height:60px;
+    display: block;
+    text-align: center;
+    margin:0 10px;
+    border-radius: 50%;
+    padding: 6px;
+    box-sizing: border-box;
+    text-decoration: none;
+    background:linear-gradient(0deg, #ddd,#fff);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    transition: .5s;
+}
+
+.footer-social ul li a:hover{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.footer-social ul li a .fa{
+    width:100%;
+    height:100%;
+    display:block;
+    background:linear-gradient(0deg, #fff, #ddd);
+    border-radius: 50%;
+    line-height: calc(60px - 12px);
+    font-size: 24px;
+    color: #262626;
+    transition: .5s;
+}
+
+.footer-social ul li:nth-child(1) a:hover .fa{
+    color: #3b5998;
+}
+.footer-social ul li:nth-child(2) a:hover .fa{
+    color: #00aced;
+}
+/*
+.footer-social ul li:nth-child(3) a:hover .fa{
+    color: #dd4b39;
+}
+.footer-social ul li:nth-child(4) a:hover .fa{
+    color: #007bb6;
+}
+<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+*/
+.footer-social ul li:nth-child(3) a:hover .fa{
+    color: #bc2a8d;
+}
+
+.footer-copyright{
+    background: #101010;
+    text-align: center;
+    color: #fff;
+    padding-top:20px;
+    padding-bottom:20px;
+}

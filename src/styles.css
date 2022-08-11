@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+.second-nav ul li a{
+    font-family: Arimo,Arial,Helvetica,lucida grande,sans-serif !important;
+    font-weight: 700 !important;
+}
+
+
+.ngx-pagination {
+    margin-left: 0;
+    margin-bottom: 0 !important;
+    padding: 10px 75px;
+}
+.ngx-pagination a{
+    color: #fff !important;
+}
+.ngx-pagination a:hover{
+    background: #f01 !important;
+    text-decoration: none !important;
+}
+.ngx-pagination .current {
+    background: rgb(82, 231, 36) !important;
+}
+.ngx-pagination a:focus{
+    outline-style: none !important;
+}
+
+
+
+
+
+
+
+@media(max-width:768px){
+    .ngx-pagination a:hover{
+        background: none !important;
+    }
+}

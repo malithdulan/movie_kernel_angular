@@ -1,0 +1,69 @@
+<p class="head" id="myDiv">
+</p>
+
+
+<div class="container con-sp loade" *ngIf="anim">
+  <div class="row">
+    <div style="margin-left:auto;margin-right:auto;display:flex;justify-content:center;align-items:center;height:300px;" class="col-md-8">
+      <div class="loader"></div>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="movie" class="con-sp">
+<div class="container main-section" [style.background-image]="'url(' + movie.secondimgurl + ')'" >
+    <div class="mheading blur-effect">
+        <h2>{{movie.filmname}}</h2>
+      </div>
+      
+<div class="row blur-effect">
+
+    
+
+<div class="col-md-6 col-lg-5 make-center ">
+
+  <div class="col-7 col-sm-7 col-md-10 col-lg-9 col-xl-7">
+      <div class="box">
+    <div class="details-img">
+        <img src="{{movie.mainimgurl}}" alt="image" class="img-responsive">
+    </div>
+      </div>
+  </div>
+
+</div>
+<div class="col-md-6 col-lg-7 second-box " >
+
+  <!--<h2>{{movie.filmname}}</h2> -->
+
+  <div class="link-box">
+    <a [href]="sanitize(movie.b720p)" *ngIf="movie.b720p" class="btn  link-btn shadow-none"><span><i class="fa fa-download" aria-hidden="true"></i></span>BluRay 720p <span style="float:right;">{{movie.sb720p}}</span></a>
+    <a [href]="sanitize(movie.mb720p)" *ngIf="movie.mb720p" class="btn  link-btnm shadow-none"><span><i class="fa fa-magnet" aria-hidden="true"></i></span>BluRay 720p <span style="float:right;">{{movie.smb720p}}</span></a>
+    <a [href]="sanitize(movie.b1080p)" *ngIf="movie.b1080p" class="btn  link-btn shadow-none"><span><i class="fa fa-download" aria-hidden="true"></i></span>BluRay1080p <span style="float:right;">{{movie.sb1080p}}</span></a>
+    <a [href]="sanitize(movie.mb1080p)" *ngIf="movie.mb1080p" class="btn  link-btnm shadow-none"><span><i class="fa fa-magnet" aria-hidden="true"></i></span>BluRay 1080p <span style="float:right;">{{movie.smb1080p}}</span></a>
+    <a [href]="sanitize(movie.w720p)" *ngIf="movie.w720p" class="btn  link-btn shadow-none"><span><i class="fa fa-download" aria-hidden="true"></i></span>WEB 720p <span style="float:right;">{{movie.sw720p}}</span></a>
+    <a [href]="sanitize(movie.mw720p)" *ngIf="movie.mw720p" class="btn  link-btnm shadow-none"><span><i class="fa fa-magnet" aria-hidden="true"></i></span>WEB 720p <span style="float:right;">{{movie.smw720p}}</span></a>
+    <a [href]="sanitize(movie.w1080p)" *ngIf="movie.w1080p" class="btn  link-btn shadow-none"><span><i class="fa fa-download" aria-hidden="true"></i></span>WEB 1080p <span style="float:right;">{{movie.sw1080p}}</span></a>
+    <a [href]="sanitize(movie.mw1080p)" *ngIf="movie.mw1080p" class="btn  link-btnm shadow-none"><span><i class="fa fa-magnet" aria-hidden="true"></i></span>WEB 1080p <span style="float:right;">{{movie.smw1080p}}</span></a>
+    
+    
+  </div>
+
+</div>
+</div>
+
+<div class="row blur-effect">
+  <div class="col-md-6 description">
+  
+    <h6><a href="{{movie.cam}}">
+      <img  src="https://yts.am/assets/images/website/logo-imdb.svg" alt="Imdb Site" /></a> <span>{{movie.imdb}}</span></h6>
+    <h6>Director : <span>{{movie.director}}</span></h6>
+    <h6>Runtime : <span>{{movie.runtime}}</span></h6>
+    <h6>Stars : <span>{{movie.actors}}</span></h6>
+    <h6>Categories : <span>{{movie.subcategory}}</span></h6>
+
+
+  </div>
+  </div>
+</div>
+</div>

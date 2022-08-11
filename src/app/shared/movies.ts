@@ -1,0 +1,34 @@
+export class Movies {
+      $key: string;
+      secondimgurl: string;
+      mainimgurl: string;
+      imdb: string;
+      filmname: string;
+      bollywood: boolean;
+      hollywood: boolean;
+      kollywood: boolean;
+      populer: boolean;
+      superhero: boolean;
+      director: string;
+      runtime: string;
+      actors: string;
+      subcategory: string;
+      maincategory: string;
+      b720p: string;
+      b1080p: string;
+      w720p: string;
+      w1080p: string;
+      sb720p: string;
+      sb1080p: string;
+      sw720p: string;
+      sw1080p: string;
+      mb720p: string;
+      mb1080p: string;
+      mw720p: string;
+      mw1080p: string;
+      smb720p: string;
+      smb1080p: string;
+      smw720p: string;
+      smw1080p: string;
+      cam: string;
+}

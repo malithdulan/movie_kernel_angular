@@ -1,0 +1,17 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": true,
+    "movies": {
+      ".indexOn": [
+        "filmname",
+        "bollywood",
+        "hollywood",
+        "kollywood",
+        "populer",
+        "superhero",
+        "uploaddate"
+      ]
+    }
+  }
+}

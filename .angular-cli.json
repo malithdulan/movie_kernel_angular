@@ -19,9 +19,17 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "assets/lib/bootstrap.min.css"
       ],
-      "scripts": [],
+      "scripts": [
+              
+              "assets/lib/jquery-3.1.0.js",
+              "assets/lib/popper.min.js",
+              "assets/lib/bootstrap.min.js",
+              "assets/js/navbar.js"
+              
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
